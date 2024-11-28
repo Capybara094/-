@@ -23,7 +23,7 @@
     <ul class="navbar-nav">
 
       <li class="nav-item">
-        <a class="nav-link" href="query.php">index</a>
+        <a class="nav-link" href="query.php">index0</a>
       </li>
 
       <li class="nav-item">
