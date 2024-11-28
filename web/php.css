@@ -1,0 +1,72 @@
+.centered-container {
+    text-align: center;
+    max-width: 500px;
+    margin: 50px auto;
+    border: 2px solid #007bff;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.centered-container h3, 
+.centered-container p {
+    margin-bottom: 20px;
+    color: black; /* 設定文字顏色為黑色 */
+}
+.centered-container ul {
+    list-style-type: none;
+    padding: 5;
+}
+.centered-container ul li {
+    margin: 10px 0;
+}
+.centered-container ul li a {
+    display: block;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+.centered-container ul li a:hover {
+    background-color: #0056b3;
+}
+
+
+/*login*/
+/* 让容器在屏幕上垂直居中 */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* 卡片样式 */
+.card {
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 表单控件样式 */
+.form-control {
+    margin-bottom: 15px;
+}
+
+/* 错误消息样式 */
+.alert {
+    margin-top: 10px;
+}
+
+/* 按钮样式 */
+.btn-block {
+    width: 100%;
+}
+.btn-1{
+    margin-top: 20px;
+    margin-bottom: -10px;
+}
