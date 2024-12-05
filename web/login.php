@@ -22,7 +22,7 @@ if ($_POST) {
             if ($row['account'] == $account && $row['password'] == $password) {
                 echo "登入成功";
                 $_SESSION["account"] = $account;//靠這個去記住登入時的資料
-                $_SESSION["role"] = $row['role'];//記錄用戶角色（從資料庫讀取）
+                // $_SESSION["role"] = $row['role'];//記錄用戶角色（從資料庫讀取）
 
                 header("Location: query.php");
             } else {

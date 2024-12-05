@@ -3,11 +3,6 @@ session_start();
 
 require_once "header.php";
 
-// 確保用戶為管理員
-if (!isset($_SESSION['role']) || $_SESSION['role'] != 'M') {
-  echo "您沒有權限進行此操作";
-  exit(); // 如果不是管理員，終止執行
-}
 
 try {
   // 預設空值
@@ -93,7 +88,7 @@ try {
     </div>
 
     <div class="mb-3 row">
-      <label for="_1" class="col-sm-2 col-form-label">求才廠商</label>
+      <label for="_1" class="col-sm-2 col-form-label">1</label>
       <div class="col-sm-10">
         <!-- 輸入框會顯示原來的公司名稱 -->
         <input type="text" class="form-control" name="1" id="_1" placeholder="公司名稱" value="<?=$one?>" required>
@@ -101,7 +96,7 @@ try {
     </div>
 
     <div class="mb-3 row">
-      <label for="_2" class="col-sm-2 col-form-label">求才廠商</label>
+      <label for="_2" class="col-sm-2 col-form-label">2</label>
       <div class="col-sm-10">
         <!-- 輸入框會顯示原來的公司名稱 -->
         <input type="text" class="form-control" name="2" id="_2" placeholder="公司名稱" value="<?=$two?>" required>
@@ -109,7 +104,7 @@ try {
     </div>
 
     <div class="mb-3 row">
-      <label for="_3" class="col-sm-2 col-form-label">求才廠商</label>
+      <label for="_3" class="col-sm-2 col-form-label">3</label>
       <div class="col-sm-10">
         <!-- 輸入框會顯示原來的公司名稱 -->
         <input type="text" class="form-control" name="3" id="_3" placeholder="公司名稱" value="<?=$three?>" required>
@@ -117,7 +112,7 @@ try {
     </div>
 
     <div class="mb-3 row">
-      <label for="_4" class="col-sm-2 col-form-label">求才廠商</label>
+      <label for="_4" class="col-sm-2 col-form-label">4</label>
       <div class="col-sm-10">
         <!-- 輸入框會顯示原來的公司名稱 -->
         <input type="text" class="form-control" name="4" id="_4" placeholder="公司名稱" value="<?=$four?>" required>
