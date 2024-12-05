@@ -33,7 +33,7 @@ try {
   }
 
   // Construct the final SQL query
-  $sql = "SELECT * FROM ";
+  $sql = "SELECT * FROM  job";
   if (!empty($conditions)) {
     $sql .= " WHERE " . implode(" AND ", $conditions);
   }
@@ -83,18 +83,22 @@ try {
 <div class="container">
   <table class="table table-bordered table-striped">
     <tr>
-      <td>求才廠商</td>
-      <td>求才內容</td>
-      <td>日期</td>
+      <td>學號</td>
+      <td>大一</td>
+      <td>大二</td>
+      <td>大三</td>
+      <td>大四</td>
       <?php if ($isAdmin): ?>
         <td>操作</td> <!-- Only show the "操作" column for admins -->
       <?php endif; ?>
     </tr>
     <?php while ($row = mysqli_fetch_assoc($result)) {?>
     <tr>
-      <td><?=$row["company"]?></td>
-      <td><?=$row["content"]?></td>
-      <td><?=$row["pdate"]?></td>
+      <td><?=$row["Stu_id"]?></td>
+      <td><?=$row["1"]?></td>
+      <td><?=$row["2"]?></td>
+      <td><?=$row["3"]?></td>
+      <td><?=$row["4"]?></td>
       <?php if ($isAdmin): ?>
         <td>
           <a href="update.php?postid=<?=$row["postid"]?>" class="btn btn-primary">修改</a>
