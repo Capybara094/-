@@ -76,9 +76,9 @@ try {
   </div> -->
   <input class="btn btn-primary" type="submit" value="搜尋">
   <!-- Only show the '+' button for admins -->
-  <?php if ($isAdmin): ?>
+  <?php?>
     <a href="insert.php" class="btn btn-primary position-fixed bottom-0 end-0" style="font-size: 30px;width: 70px ;height: 70px">+</a>
-  <?php endif; ?>
+  <?php?>
 </form>
 
 <div class="container">
@@ -89,9 +89,9 @@ try {
       <td>大二</td>
       <td>大三</td>
       <td>大四</td>
-      <?php if ($isAdmin): ?>
+      <?php?>
         <td>操作</td> <!-- Only show the "操作" column for admins -->
-      <?php endif; ?>
+      <?php?>
     </tr>
     <?php while ($row = mysqli_fetch_assoc($result)) {?>
     <tr>
@@ -100,12 +100,12 @@ try {
       <td><?=$row["2"]?></td>
       <td><?=$row["3"]?></td>
       <td><?=$row["4"]?></td>
-      <?php if ($isAdmin): ?>
+      <?php?>
         <td>
           <a href="update.php?Stu_id=<?=$row["Stu_id"]?>" class="btn btn-primary">修改</a>
           <a href="delete.php?Stu_id=<?=$row["Stu_id"]?>" class="btn btn-danger">刪除</a>
         </td>
-      <?php endif; ?>
+      <?php?>
     </tr>
     <?php } ?>
   </table>

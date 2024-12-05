@@ -78,44 +78,45 @@ try {
 <div class="container">
   <!-- 表單：顯示文章原本的資料 -->
   <form action="update.php?Stu_id=<?=$Stu_id?>&action=confirmed" method="post">
+    
+
+  <div class="mb-3 row">
+      <label for="Stu_id" class="col-sm-2 col-form-label">學號</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="Stu_id" value="<?=$Stu_id?>" readonly>
+      </div>
+    </div>
+
 
     <div class="mb-3 row">
-      <label for="_Stu_id" class="col-sm-2 col-form-label">學號</label>
+      <label for="_1" class="col-sm-2 col-form-label">大一</label>
       <div class="col-sm-10">
         <!-- 輸入框會顯示原來的公司名稱 -->
-        <input type="text" class="form-control" name="Stu_id" id="_Stu_id" placeholder="學號" value="<?=$Stu_id?>" required>
+        <input type="text" class="form-control" name="1" id="_1" placeholder="職位" value="<?=$one?>" required>
       </div>
     </div>
 
     <div class="mb-3 row">
-      <label for="_1" class="col-sm-2 col-form-label">1</label>
+      <label for="_2" class="col-sm-2 col-form-label">大二</label>
       <div class="col-sm-10">
         <!-- 輸入框會顯示原來的公司名稱 -->
-        <input type="text" class="form-control" name="1" id="_1" placeholder="公司名稱" value="<?=$one?>" required>
+        <input type="text" class="form-control" name="2" id="_2" placeholder="職位" value="<?=$two?>" required>
       </div>
     </div>
 
     <div class="mb-3 row">
-      <label for="_2" class="col-sm-2 col-form-label">2</label>
+      <label for="_3" class="col-sm-2 col-form-label">大三</label>
       <div class="col-sm-10">
         <!-- 輸入框會顯示原來的公司名稱 -->
-        <input type="text" class="form-control" name="2" id="_2" placeholder="公司名稱" value="<?=$two?>" required>
+        <input type="text" class="form-control" name="3" id="_3" placeholder="職位" value="<?=$three?>" required>
       </div>
     </div>
 
     <div class="mb-3 row">
-      <label for="_3" class="col-sm-2 col-form-label">3</label>
+      <label for="_4" class="col-sm-2 col-form-label">大四</label>
       <div class="col-sm-10">
         <!-- 輸入框會顯示原來的公司名稱 -->
-        <input type="text" class="form-control" name="3" id="_3" placeholder="公司名稱" value="<?=$three?>" required>
-      </div>
-    </div>
-
-    <div class="mb-3 row">
-      <label for="_4" class="col-sm-2 col-form-label">4</label>
-      <div class="col-sm-10">
-        <!-- 輸入框會顯示原來的公司名稱 -->
-        <input type="text" class="form-control" name="4" id="_4" placeholder="公司名稱" value="<?=$four?>" required>
+        <input type="text" class="form-control" name="4" id="_4" placeholder="職位" value="<?=$four?>" required>
       </div>
     </div>
 
