@@ -11,7 +11,7 @@ if ($_POST) {
     $password = $_POST['password'] ?? "N/A";
 
     try {
-        $sql = "select * from user where account = ?";
+        $sql = "select * from login where account = ?";
         $stmt = mysqli_stmt_init($conn);
         mysqli_stmt_prepare($stmt, $sql);
         mysqli_stmt_bind_param($stmt, "s", $account);

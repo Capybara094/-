@@ -11,7 +11,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] != 'M') {
 try {
 
   require_once 'db.php';
-  $sql = "INSERT INTO job (company, content, pdate) VALUES (?, ?, NOW())";
+  $sql = "INSERT INTO people (company, content, pdate) VALUES (?, ?, NOW())";
   $stmt = mysqli_stmt_init($conn);
   mysqli_stmt_prepare($stmt, $sql);
 
