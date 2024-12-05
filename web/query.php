@@ -33,7 +33,7 @@ try {
   }
 
   // Construct the final SQL query
-  $sql = "SELECT * FROM job";
+  $sql = "SELECT * FROM ";
   if (!empty($conditions)) {
     $sql .= " WHERE " . implode(" AND ", $conditions);
   }
