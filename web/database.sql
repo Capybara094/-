@@ -1,5 +1,5 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1112121
+-- version 5.2.11
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
