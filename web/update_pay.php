@@ -88,7 +88,7 @@ try {
     <div class="mb-3 row">
       <label for="name" class="col-sm-2 col-form-label">姓名</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" id="name" value="<?=$name?>" readonly>
+        <input type="text" class="form-control" id="name" name="name" value="<?=$name?>">
       </div>
     </div>
 
