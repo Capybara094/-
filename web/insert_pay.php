@@ -21,8 +21,15 @@ try {
       $pay_date = $_POST["pay_date"];
       $status = $_POST["status"];
 
+      if ($status == 'Y') {
+        // If paid, use current timestamp for pay_date
+        $pay_date = "NOW()";
+    } else {
+        // If not paid, set pay_date as NULL or empty string
+        $pay_date = "NULL";  // You can also use an empty string if you prefer
+    }
 
-    $sql = "INSERT INTO fee_manage (Stu_id, `name`, `pay_date`, `status`) VALUES (?, ?, NOW(), ?)";
+    $sql = "INSERT INTO fee_manage (Stu_id, `name`, `pay_date`, `status`) VALUES (?, ?, $pay_date, ?)";
     $stmt = mysqli_stmt_init($conn);
 
     mysqli_stmt_prepare($stmt, $sql);
