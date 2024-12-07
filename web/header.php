@@ -27,19 +27,11 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="conference.php">Conference</a>
-      </li>
-
-      <li class="nav-item">
         <a class="nav-link" href="fee.php">Fee</a>
       </li>
       
       <li class="nav-item">
         <a class="nav-link" href="user.php">User</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="manage.php">Manage</a>
       </li>
 
       <li class="nav-item">
