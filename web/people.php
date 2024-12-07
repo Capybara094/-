@@ -91,9 +91,9 @@ try {
       <td>姓名</td>
       <td>聯絡電話</td>
       <td>入學時間</td>
-      <?php?>
-        <td>操作</td> <!-- Only show the "操作" column for admins -->
-      <?php?>
+      <!-- <?php?>
+        <td>操作</td> 
+      <?php?> -->
     </tr>
     <?php while ($row = mysqli_fetch_assoc($result)) {?>
     <tr>
@@ -101,12 +101,12 @@ try {
       <td><?=$row["name"]?></td>
       <td><?=$row["contact"]?></td>
       <td><?=$row["time"]?></td>
-      <?php?>
+      <!-- <?php?>
         <td>
           <a href="update.php?Stu_id=<?=$row["Stu_id"]?>" class="btn btn-primary">修改</a>
           <a href="delete.php?Stu_id=<?=$row["Stu_id"]?>" class="btn btn-danger">刪除</a>
         </td>
-      <?php?>
+      <?php?> -->
     </tr>
     <?php } ?>
   </table>
