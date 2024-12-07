@@ -104,10 +104,14 @@ try {
     <div class="mb-3 row">
       <label for="_status" class="col-sm-2 col-form-label">繳費狀態</label>
       <div class="col-sm-10">
-        <!-- 輸入框會顯示原來的公司名稱 -->
-        <input type="text" class="form-control" name="status" id="_status" placeholder="status" value="<?=$status?>">
+        <!-- 使用 select 來讓使用者選擇 'y' 或 'n' -->
+        <select class="form-control" name="status" id="_status">
+          <option value="y" <?=$status == 'y' ? 'selected' : ''?>>已繳費</option>
+          <option value="n" <?=$status == 'n' ? 'selected' : ''?>>未繳費</option>
+        </select>
       </div>
     </div>
+
 
     <input class="btn btn-primary" type="submit" value="送出">
   </form>
