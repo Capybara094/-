@@ -58,22 +58,19 @@ $result = mysqli_query($conn, $sql);
 ?>
   <!-- 繳費狀態篩選 -->
 <form action="fee.php" method="post">
+  <input placeholder="輸入學號" class="form-control" type="text" name="searchtxt" value="<?=$searchtxt?>">
   <select name="status" class="form-select" aria-label="繳費狀態">
     <option selected value="" <?=($status == '') ? 'selected' : ''?>>選擇繳費狀態</option>
     <option value="Y" <?=($status == 'Y') ? 'selected' : ''?>>已繳費</option>
     <option value="N" <?=($status == 'N') ? 'selected' : ''?>>未繳費</option>
   </select>
-
-  <input placeholder="輸入學號" class="form-control" type="text" name="searchtxt" value="<?=$searchtxt?>">
-
   <input class="btn btn-primary" type="submit" value="搜尋">  
-  <a href="insert_pay.php" class="btn btn-primary position-fixed bottom-0 end-0" style="font-size: 30px; width: 70px; height: 70px; margin: 20px;">+</a>
+  <a href="insert_pay.php" class="btn btn-primary position-fixed bottom-0 end-0" style="font-size: 30px; width: 60px; height: 60px; margin: 20px;">+</a>
 </form>
 
 <div class="container mt-3">
-  <p>共找到 <?=$totalRecords?> 筆資料</p>
+  <p>共 <?=$totalRecords?> 筆資料</p>
 </div>
-
 
 <div class="container">
   <table class="table table-bordered table-striped">

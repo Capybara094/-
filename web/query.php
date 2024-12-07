@@ -48,28 +48,20 @@ try {
   // Execute the query
   $result = mysqli_query($conn, $sql);
 
-  // Get the total count of the results
-  $totalRecords = mysqli_num_rows($result);
-
 ?>
 
 <form action="query.php" method="post">
-  <select name="order" class="form-select" aria-label="選擇排序欄位">
+  <input placeholder="輸入學號" class="form-control" type="text" name="searchtxt" value="<?=$searchtxt?>">
+  <!-- <select name="order" class="form-select" aria-label="選擇排序欄位">
     <option selected value="" <?=($order == '') ? 'selected' : ''?>>選擇排序欄位</option>
     <option value="1" <?=($order == "1") ? 'selected' : ""?>>大一</option>
     <option value="2" <?=($order == "2") ? 'selected' : ""?>>大二</option>
     <option value="3" <?=($order == "3") ? 'selected' : ""?>>大三</option>
     <option value="4" <?=($order == "4") ? 'selected' : ""?>>大四</option>
-  </select>
-  <input placeholder="輸入學號" class="form-control" type="text" name="searchtxt" value="<?=$searchtxt?>">
+  </select> -->
   <input class="btn btn-primary" type="submit" value="搜尋">
-  <a href="insert.php" class="btn btn-primary position-fixed bottom-0 end-0" style="font-size: 30px; width: 70px; height: 70px; margin: 20px;">+</a>
+  <a href="insert.php" class="btn btn-primary position-fixed bottom-0 end-0" style="font-size: 30px; width: 60px; height: 60px; margin: 20px;">+</a>
 </form>
-
-<!-- 顯示符合條件的資料筆數 -->
-<div class="container mt-3">
-  <p>共找到 <?=$totalRecords?> 筆資料</p>
-</div>
 
 <div class="container">
   <table class="table table-bordered table-striped">

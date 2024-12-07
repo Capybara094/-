@@ -78,10 +78,9 @@ try {
   </div>
   <input class="btn btn-primary" type="submit" value="搜尋">
   <!-- Only show the '+' button for admins -->
-  <?php?>
-  <a href="insert.php" class="btn btn-primary position-fixed bottom-0 end-0" style="font-size: 30px; width: 70px; height: 70px; margin: 20px;">+</a>
-
-  <?php?>
+  <!-- <?php?>
+  <a href="insert.php" class="btn btn-primary position-fixed bottom-0 end-0" style="font-size: 30px; width: 60px; height: 60px; margin: 20px;">+</a>
+  <?php?> -->
 </form>
 
 <div class="container">
