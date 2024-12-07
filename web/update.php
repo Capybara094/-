@@ -30,10 +30,10 @@ try {
       $four = $_POST["4"]; // 獲取更新的求才內容
 
       // 更新資料庫中的資料
-      $sql = "UPDATE job SET `1`=?, `2`=?, `3`=?, `4`=?WHERE Stu_id=?";
+      $sql = "UPDATE job SET `1`=?, `2`=?, `3`=?, `4`=? WHERE Stu_id=?";
       $stmt = mysqli_stmt_init($conn);
       mysqli_stmt_prepare($stmt, $sql);
-      mysqli_stmt_bind_param($stmt, "ssi", $one, $two, $three, $four, $Stu_id);
+      mysqli_stmt_bind_param($stmt, "sssss", $one, $two, $three, $four, $Stu_id);
 
       $result = mysqli_stmt_execute($stmt);
 
@@ -92,7 +92,7 @@ try {
       <label for="_1" class="col-sm-2 col-form-label">大一</label>
       <div class="col-sm-10">
         <!-- 輸入框會顯示原來的公司名稱 -->
-        <input type="text" class="form-control" name="1" id="_1" placeholder="職位" value="<?=$one?>" required>
+        <input type="text" class="form-control" name="1" id="_1" placeholder="職位" value="<?=$one?>">
       </div>
     </div>
 
@@ -100,7 +100,7 @@ try {
       <label for="_2" class="col-sm-2 col-form-label">大二</label>
       <div class="col-sm-10">
         <!-- 輸入框會顯示原來的公司名稱 -->
-        <input type="text" class="form-control" name="2" id="_2" placeholder="職位" value="<?=$two?>" required>
+        <input type="text" class="form-control" name="2" id="_2" placeholder="職位" value="<?=$two?>">
       </div>
     </div>
 
@@ -108,7 +108,7 @@ try {
       <label for="_3" class="col-sm-2 col-form-label">大三</label>
       <div class="col-sm-10">
         <!-- 輸入框會顯示原來的公司名稱 -->
-        <input type="text" class="form-control" name="3" id="_3" placeholder="職位" value="<?=$three?>" required>
+        <input type="text" class="form-control" name="3" id="_3" placeholder="職位" value="<?=$three?>">
       </div>
     </div>
 
@@ -116,7 +116,7 @@ try {
       <label for="_4" class="col-sm-2 col-form-label">大四</label>
       <div class="col-sm-10">
         <!-- 輸入框會顯示原來的公司名稱 -->
-        <input type="text" class="form-control" name="4" id="_4" placeholder="職位" value="<?=$four?>" required>
+        <input type="text" class="form-control" name="4" id="_4" placeholder="職位" value="<?=$four?>">
       </div>
     </div>
 
