@@ -21,9 +21,18 @@ try {
 
   // Add search text condition
   if ($searchtxt) {
-    $conditions[] = "(Stu_id LIKE '%$searchtxt%' OR Stu_id LIKE '%$searchtxt%')";
-  }
-
+    if ($order) {
+        // 根據選擇的排序欄位進行具體欄位的查詢
+        $conditions[] = "`$order` LIKE '%$searchtxt%'";
+    } else {
+        // 若未指定排序，則在所有欄位中查詢
+        $conditions[] = "(Stu_id LIKE '%$searchtxt%' 
+                         OR `1` LIKE '%$searchtxt%' 
+                         OR `2` LIKE '%$searchtxt%' 
+                         OR `3` LIKE '%$searchtxt%' 
+                         OR `4` LIKE '%$searchtxt%')";
+    }
+}
   // // Add date range condition
   // if ($start_date) {
   //   $conditions[] = "pdate >= '$start_date'";
