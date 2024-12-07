@@ -52,17 +52,10 @@ if ($order) {
 // Execute the query
 $result = mysqli_query($conn, $sql);
 ?>
-
-<form action="query.php" method="post">
-  <select name="order" class="form-select" aria-label="選擇排序欄位">
-    <option selected value="" <?=($order == '') ? 'selected' : ''?>>選擇排序欄位</option>
-    <option value="paid" <?=($order == "paid") ? 'selected' : ""?>>已付會費</option>
-    <option value="unpaid" <?=($order == "unpaid") ? 'selected' : ""?>>未付會費</option>
-  </select>
-
   <!-- 繳費狀態篩選 -->
+<form action="fee.php" method="post">
   <select name="status" class="form-select" aria-label="繳費狀態">
-    <option selected value="">選擇繳費狀態</option>
+    <option selected value="" <?=($status == '') ? 'selected' : ''?>>選擇繳費狀態</option>
     <option value="Y" <?=($status == 'Y') ? 'selected' : ''?>>已繳費</option>
     <option value="N" <?=($status == 'N') ? 'selected' : ''?>>未繳費</option>
   </select>
@@ -79,7 +72,7 @@ $result = mysqli_query($conn, $sql);
       <td>學號</td>
       <td>姓名</td>
       <td>付款時間</td>
-      <td>是否有付款</td>
+      <td>付款狀態</td>
       <?php?>
         <td>操作</td> <!-- Only show the "操作" column for admins -->
       <?php?>

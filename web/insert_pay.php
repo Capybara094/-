@@ -22,11 +22,11 @@ try {
       $status = $_POST["status"];
 
 
-    $sql = "INSERT INTO fee_manage (Stu_id, `name`, `2`, `3`, `4`) VALUES (?, ?, NOW(), ?)";
+    $sql = "INSERT INTO fee_manage (Stu_id, `name`, `pay_date`, `status`) VALUES (?, ?, NOW(), ?)";
     $stmt = mysqli_stmt_init($conn);
 
     mysqli_stmt_prepare($stmt, $sql);
-    mysqli_stmt_bind_param($stmt, "sssss", $Stu_id, $name, $pay_date, $status, $four);
+    mysqli_stmt_bind_param($stmt, "ssss", $Stu_id, $name, $pay_date, $status);
 
     $result = mysqli_stmt_execute($stmt);
 
