@@ -2,21 +2,13 @@
 session_start();//靠這個去記住登入時的資料，LOGIN記得也要
 require_once "header.php";
 
-//*回CALL當時記住時的資料
-if (!isset($_SESSION['role']) || $_SESSION['role'] != 'M') {
-  echo "您沒有權限進行此操作";
-  exit(); // 如果不是管理員，終止執行
-}
-
 try {
 
-  $postid = "";
-
-  $company = "";
-
-  $content = "";
-
-  $pdate = "";
+  $Stu_id = "";
+  $one = "";
+  $two = "";
+  $three = "";
+  $four = "";
 
 
 
@@ -30,15 +22,15 @@ try {
 
       //delete data
 
-      $postid = $_GET["postid"];
+      $Stu_id = $_GET["Stu_id"];
 
-      $sql="delete from job where postid=?";
+      $sql="delete from job where Stu_id=?";
 
       $stmt = mysqli_stmt_init($conn);
 
       mysqli_stmt_prepare($stmt, $sql);
 
-      mysqli_stmt_bind_param($stmt, "i", $postid);
+      mysqli_stmt_bind_param($stmt, "s", $Stu_id);
 
       $result = mysqli_stmt_execute($stmt);
 
@@ -52,9 +44,9 @@ try {
 
       //show data
 
-      $postid = $_GET["postid"];
+      $Stu_id = $_GET["Stu_id"];
 
-      $sql="select postid, company, content, pdate from job where postid=?";    
+      $sql="select Stu_id, `1`, `2`, `3`, `4` from job where Stu_id=?";    
 
       // $result = mysqli_query($conn, $sql);
 
@@ -62,13 +54,13 @@ try {
 
       mysqli_stmt_prepare($stmt, $sql);
 
-      mysqli_stmt_bind_param($stmt, "i", $postid);
+      mysqli_stmt_bind_param($stmt, "s", $Stu_id);
 
       $res = mysqli_stmt_execute($stmt);
 
       if ($res){
 
-        mysqli_stmt_bind_result($stmt, $postid, $company, $content, $pdate);
+        mysqli_stmt_bind_result($stmt, $Stu_id, $one, $two, $three, $four);
 
         mysqli_stmt_fetch($stmt);
 
@@ -94,31 +86,32 @@ try {
 
     <tr>
 
-      <td>編號</td>
+      <td>學生</td>
 
-      <td>求才廠商</td>
+      <td>大一職位</td>
 
-      <td>求才內容</td>
+      <td>大二職位</td>
 
-      <td>刊登日期</td>
+      <td>大三職位</td>
 
     </tr>
 
     <tr>
 
-      <td><?=$postid?></td>
+      <td><?=$Stu_id?></td>
 
-      <td><?=$company?></td>
+      <td><?=$one?></td>
 
-      <td><?=$content?></td>
+      <td><?=$two?></td>
 
-      <td><?=$pdate?></td>
+      <td><?=$three?></td>
 
+      <td><?=$four?></td>
     </tr>
 
   </table>
 
-  <a href="delete.php?postid=<?=$postid?>&action=confirmed" class="btn btn-primary">刪除</a>
+  <a href="delete.php?Stu_id=<?=$Stu_id?>&action=confirmed" class="btn btn-primary">刪除</a>
 
 
 

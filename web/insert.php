@@ -3,15 +3,10 @@ session_start();
 
 require_once "header.php";
 
-if (!isset($_SESSION['role']) || $_SESSION['role'] != 'M') {
-  echo "您沒有權限進行此操作";
-  exit(); // 如果不是管理員，終止執行
-}
-
 try {
 
   require_once 'db.php';
-  $sql = "INSERT INTO people (company, content, pdate) VALUES (?, ?, NOW())";
+  $sql = "INSERT INTO job (Stu_id, `1`, `2`, `3`, `4`) VALUES (?, ?, ?, ?, ?)";
   $stmt = mysqli_stmt_init($conn);
   mysqli_stmt_prepare($stmt, $sql);
 
@@ -21,14 +16,17 @@ try {
 
     // insert data
 
-    $company = $_POST["company"];
-    $content = $_POST["content"];
+      $Stu_id = $_POST["Stu_id"];
+      $one = $_POST["1"];
+      $two = $_POST["2"];
+      $three = $_POST["3"];
+      $four = $_POST["4"];
 
-    $sql = "INSERT INTO job (company, content, pdate) VALUES (?, ?, NOW())";
+    $sql = "INSERT INTO job (Stu_id, `1`, `2`, `3`, `4`) VALUES (?, ?, ?, ?, ?)";
     $stmt = mysqli_stmt_init($conn);
 
     mysqli_stmt_prepare($stmt, $sql);
-    mysqli_stmt_bind_param($stmt, "ss", $company, $content);
+    mysqli_stmt_bind_param($stmt, "sssss", $Stu_id, $one, $two, $three, $four);
 
     $result = mysqli_stmt_execute($stmt);
 
@@ -49,20 +47,35 @@ try {
     <table class="table table-bordered table-striped" style="width:700px;height:700px;">
       <thead>
         <tr>
-          <th colspan="2" class="text-center">新增求才資料</th>
+          <th colspan="5" class="text-center">新增學生資料</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><label for="_company" class="col-form-label">求才廠商</label></td>
-          <td><input type="text" class="form-control" name="company" id="_company" placeholder="公司名稱" required></td>
+          <td><label for="_Stu_id" class="col-form-label">學號</label></td>
+          <td><input type="text" class="form-control" name="Stu_id" id="_Stu_id" placeholder="學生學號" required></td>
+        </tr>
+
+        <tr>
+          <td><label for="_1" class="col-form-label">大一</label></td>
+          <td><input type="text" class="form-control" name="1" id="_1" placeholder="大一職位"></td>
+        </tr>
+
+        <tr>
+          <td><label for="_2" class="col-form-label">大二</label></td>
+          <td><input type="text" class="form-control" name="2" id="_2" placeholder="大二職位"></td>
+        </tr>
+
+        <tr>
+          <td><label for="_3" class="col-form-label">大三</label></td>
+          <td><input type="text" class="form-control" name="3" id="_3" placeholder="大三職位"></td>
         </tr>
         <tr>
-          <td><label for="_content" class="form-label">求才內容</label></td>
-          <td><textarea class="form-control" name="content" id="_content" rows="10" required></textarea></td>
+          <td><label for="_4" class="col-form-label">大四</label></td>
+          <td><input type="text" class="form-control" name="4" id="_4" placeholder="大四職位"></td>
         </tr>
         <tr>
-          <td colspan="2" class="text-center">
+          <td colspan="5" class="text-center">
             <input class="btn btn-primary btn-1" type="submit" value="送出">
           </td>
         </tr>

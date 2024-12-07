@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2024-12-05 09:42:29
+-- 產生時間： 2024-12-07 07:55:16
 -- 伺服器版本： 10.4.32-MariaDB
 -- PHP 版本： 8.2.12
 
@@ -51,10 +51,10 @@ INSERT INTO `fee_manage` (`Stu_id`, `name`, `pay_date`, `status`) VALUES
 
 CREATE TABLE `job` (
   `Stu_id` varchar(20) NOT NULL,
-  `1` varchar(20) NOT NULL,
-  `2` varchar(20) NOT NULL,
-  `3` varchar(20) NOT NULL,
-  `4` varchar(20) NOT NULL
+  `1` varchar(20) DEFAULT NULL,
+  `2` varchar(20) DEFAULT NULL,
+  `3` varchar(20) DEFAULT NULL,
+  `4` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
