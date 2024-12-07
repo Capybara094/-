@@ -26,7 +26,7 @@ try {
     $stmt = mysqli_stmt_init($conn);
 
     mysqli_stmt_prepare($stmt, $sql);
-    mysqli_stmt_bind_param($stmt, "ssss", $Stu_id, $name, $pay_date, $status);
+    mysqli_stmt_bind_param($stmt, "sss", $Stu_id, $name, $status);
 
     $result = mysqli_stmt_execute($stmt);
 
