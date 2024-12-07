@@ -32,17 +32,10 @@ try {
                          OR `3` LIKE '%$searchtxt%' 
                          OR `4` LIKE '%$searchtxt%')";
     }
-}
-  // // Add date range condition
-  // if ($start_date) {
-  //   $conditions[] = "pdate >= '$start_date'";
-  // }
-  // if ($end_date) {
-  //   $conditions[] = "pdate <= '$end_date'";
-  // }
+  }
 
   // Construct the final SQL query
-  $sql = "SELECT * FROM  job";
+  $sql = "SELECT * FROM job";
   if (!empty($conditions)) {
     $sql .= " WHERE " . implode(" AND ", $conditions);
   }
@@ -55,8 +48,8 @@ try {
   // Execute the query
   $result = mysqli_query($conn, $sql);
 
-  // Check if user is logged in and is an admin (role 'M')
-  // $isAdmin = isset($_SESSION['role']) && $_SESSION['role'] === 'M';
+  // Get the total count of the results
+  $totalRecords = mysqli_num_rows($result);
 
 ?>
 
@@ -69,27 +62,14 @@ try {
     <option value="4" <?=($order == "4") ? 'selected' : ""?>>大四</option>
   </select>
   <input placeholder="輸入學號" class="form-control" type="text" name="searchtxt" value="<?=$searchtxt?>">
-  <!-- <div class="row g-3 align-items-center">
-    <div class="col-auto">
-      <label for="start_date" class="col-form-label">開始日期</label>
-    </div>
-    <div class="col-auto">
-      <input id="start_date" class="form-control" type="date" name="start_date" value="<?=$start_date?>">
-    </div>
-    <div class="col-auto">
-      <label for="end_date" class="col-form-label">結束日期</label>
-    </div>
-    <div class="col-auto">
-      <input id="end_date" class="form-control" type="date" name="end_date" value="<?=$end_date?>">
-    </div>
-  </div> -->
   <input class="btn btn-primary" type="submit" value="搜尋">
-  <!-- Only show the '+' button for admins -->
-  <?php?>
   <a href="insert.php" class="btn btn-primary position-fixed bottom-0 end-0" style="font-size: 30px; width: 70px; height: 70px; margin: 20px;">+</a>
-
-  <?php?>
 </form>
+
+<!-- 顯示符合條件的資料筆數 -->
+<div class="container mt-3">
+  <p>共找到 <?=$totalRecords?> 筆資料</p>
+</div>
 
 <div class="container">
   <table class="table table-bordered table-striped">
@@ -99,9 +79,7 @@ try {
       <td>大二</td>
       <td>大三</td>
       <td>大四</td>
-      <?php?>
-        <td>操作</td> <!-- Only show the "操作" column for admins -->
-      <?php?>
+      <td>操作</td> <!-- Only show the "操作" column for admins -->
     </tr>
     <?php while ($row = mysqli_fetch_assoc($result)) {?>
     <tr>
@@ -110,12 +88,10 @@ try {
       <td><?=$row["2"]?></td>
       <td><?=$row["3"]?></td>
       <td><?=$row["4"]?></td>
-      <?php?>
-        <td>
-          <a href="update.php?Stu_id=<?=$row["Stu_id"]?>" class="btn btn-primary">修改</a>
-          <a href="delete.php?Stu_id=<?=$row["Stu_id"]?>" class="btn btn-danger">刪除</a>
-        </td>
-      <?php?>
+      <td>
+        <a href="update.php?Stu_id=<?=$row["Stu_id"]?>" class="btn btn-primary">修改</a>
+        <a href="delete.php?Stu_id=<?=$row["Stu_id"]?>" class="btn btn-danger">刪除</a>
+      </td>
     </tr>
     <?php } ?>
   </table>

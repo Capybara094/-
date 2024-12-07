@@ -3,14 +3,12 @@ session_start();
 
 require_once "header.php";
 
-
 try {
   // 預設空值
   $Stu_id = "";
   $name = "";
-  $pay_date= "";
-  $status= "";
-
+  $pay_date = "";
+  $status = "";
 
   // 如果有傳遞參數
   if ($_GET) {
@@ -24,9 +22,8 @@ try {
 
       $Stu_id = $_GET["Stu_id"];
       $name = $_POST["name"];
-      $pay_date = date('Y-m-d H:i:s');
-      $status = $_POST["status"]; 
-  
+      $status = $_POST["status"];
+      $pay_date = ($_POST["status"] == 'N') ? NULL : date('Y-m-d H:i:s');  // 如果未繳費，設為 NULL，否則設定為當前時間
 
       // 更新資料庫中的資料
       $sql = "UPDATE fee_manage SET `name`=?, `pay_date`=?, `status`=? WHERE Stu_id=?";
@@ -45,7 +42,6 @@ try {
 
     } else {
       // 如果是普通顯示，從資料庫中查詢這筆資料
-
       $Stu_id = $_GET["Stu_id"];
       $sql = "SELECT Stu_id, `name`, `pay_date`, `status` FROM fee_manage WHERE Stu_id=?";
       $stmt = mysqli_stmt_init($conn);
@@ -70,15 +66,12 @@ try {
 } catch (Exception $e) {
   echo '錯誤訊息: ' . $e->getMessage();
 }
-
 ?>
 
 <div class="container">
   <!-- 表單：顯示文章原本的資料 -->
   <form action="update_pay.php?Stu_id=<?=$Stu_id?>&action=confirmed" method="post">
-    
-
-  <div class="mb-3 row">
+    <div class="mb-3 row">
       <label for="Stu_id" class="col-sm-2 col-form-label">學號</label>
       <div class="col-sm-10">
         <input type="text" class="form-control" id="Stu_id" value="<?=$Stu_id?>" readonly>
@@ -92,7 +85,6 @@ try {
       </div>
     </div>
 
-
     <div class="mb-3 row">
       <label for="_pay_date" class="col-sm-2 col-form-label">付款日期</label>
       <div class="col-sm-10">
@@ -104,14 +96,13 @@ try {
     <div class="mb-3 row">
       <label for="_status" class="col-sm-2 col-form-label">繳費狀態</label>
       <div class="col-sm-10">
-        <!-- 使用 select 來讓使用者選擇 'y' 或 'n' -->
-        <select class="form-control" name="status" id="_status">
-          <option value="y" <?=$status == 'y' ? 'selected' : ''?>>已繳費</option>
-          <option value="n" <?=$status == 'n' ? 'selected' : ''?>>未繳費</option>
+        <!-- 使用 select 來讓使用者選擇 'Y' 或 'N' -->
+        <select class="form-control" name="status" id="_status" onchange="updatePayDate()">
+          <option value="Y" <?=$status == 'Y' ? 'selected' : ''?>>已繳費</option>
+          <option value="N" <?=$status == 'N' ? 'selected' : ''?>>未繳費</option>
         </select>
       </div>
     </div>
-
 
     <input class="btn btn-primary" type="submit" value="送出">
   </form>
@@ -119,6 +110,28 @@ try {
 
 <!-- 返回操作的按鈕 -->
 <button class="btn btn-secondary" onclick="history.back();">返回</button>
+
+<script>
+  // 當選擇繳費狀態時，更新付款日期
+  function updatePayDate() {
+    const status = document.getElementById('_status').value;
+    const payDateInput = document.getElementById('_pay_date');
+    
+    if (status === 'N') {
+      // 如果是未繳費，清空付款日期並設置為 NULL，並禁用編輯
+      payDateInput.value = '';  // 清空
+      payDateInput.readOnly = true;  // 設為 readonly 讓無法修改
+    } else {
+      // 如果是已繳費，顯示原付款日期並允許編輯
+      payDateInput.value = '<?=$pay_date?>';  // 恢復原付款日期
+      payDateInput.readOnly = false;  // 允許編輯
+    }
+  }
+
+  // 頁面載入時呼叫一次，根據現有狀態設置付款日期
+  window.onload = updatePayDate;
+</script>
+
 
 <?php
 require_once "footer.php";

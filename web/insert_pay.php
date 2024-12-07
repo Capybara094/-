@@ -76,14 +76,14 @@ try {
         <tr>
           <td><label for="_status" class="col-form-label">繳費狀態</label></td>
           <td>
-            <!-- 使用 select 來讓使用者選擇 'y' 或 'n' -->
+            <!-- 使用 select 來讓使用者選擇 'Y' 或 'N' -->
             <select class="form-control" name="status" id="_status">
-              <option value="y">已繳費</option>
-              <option value="n">未繳費</option>
+              <option value="Y">已繳費</option>
+              <option value="N">未繳費</option>
             </select>
           </td>
         </tr>
-        
+
         <tr>
           <td colspan="4" class="text-center">
             <input class="btn btn-primary btn-1" type="submit" value="送出">

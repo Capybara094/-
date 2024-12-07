@@ -13,9 +13,15 @@
   <div class="container-fluid">
     <!-- 左邊的連結 -->
     <ul class="navbar-nav">
+      
       <li class="nav-item">
-        <a class="nav-link" href="query.php">學生名單</a>
+        <a class="nav-link" href="people.php">學生名單</a>
       </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="query.php">幹部紀錄</a>
+      </li>
+
       <li class="nav-item">
         <a class="nav-link" href="fee.php">會費管理</a>
       </li>

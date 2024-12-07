@@ -51,6 +51,10 @@ if ($order) {
 
 // Execute the query
 $result = mysqli_query($conn, $sql);
+
+ // Get the total count of the results
+ $totalRecords = mysqli_num_rows($result);
+
 ?>
   <!-- 繳費狀態篩選 -->
 <form action="fee.php" method="post">
@@ -65,6 +69,11 @@ $result = mysqli_query($conn, $sql);
   <input class="btn btn-primary" type="submit" value="搜尋">  
   <a href="insert_pay.php" class="btn btn-primary position-fixed bottom-0 end-0" style="font-size: 30px; width: 70px; height: 70px; margin: 20px;">+</a>
 </form>
+
+<div class="container mt-3">
+  <p>共找到 <?=$totalRecords?> 筆資料</p>
+</div>
+
 
 <div class="container">
   <table class="table table-bordered table-striped">
