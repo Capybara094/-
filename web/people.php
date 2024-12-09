@@ -60,7 +60,8 @@ try {
 ?>
 
 <form action="people.php" method="post">
-  <input placeholder="輸入學號" class="form-control" type="text" name="searchtxt" value="<?=$searchtxt?>">
+<div class="d-flex justify-content-center m-4">
+  <input placeholder="輸入學號" class="form-control w-50 me-3" type="text" name="searchtxt" value="<?=$searchtxt?>">
 
   <div class="row g-time align-items-center">
     <div class="col-auto">
@@ -72,11 +73,11 @@ try {
     <div class="col-auto">
       <label for="end_date" class="col-form-label">結束日期</label>
     </div>
-    <div class="col-auto">
+    <div class="col-auto me-3">
       <input id="end_date" class="form-control" type="date" name="end_date" value="<?=$end_date?>">
     </div>
   </div>
-  <input class="btn btn-primary" type="submit" value="搜尋">
+  <input class="btn btn-primary w-20" type="submit" value="搜尋">
   <!-- Only show the '+' button for admins -->
   <!-- <?php?>
   <a href="insert.php" class="btn btn-primary position-fixed bottom-0 end-0" style="font-size: 30px; width: 60px; height: 60px; margin: 20px;">+</a>
