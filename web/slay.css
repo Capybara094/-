@@ -43,40 +43,41 @@ nav>ul {
   color: #ffffff;
   background-color:#00739B;
 }
+
 .hit-me-hard-and-soft {
     background-color: #0A1D32;
     color: #FFFFFF;
   }
   
-  .hit-me-hard-and-soft .light-blue {
+  .HMHAS01 {
     color: #009DEE;
   }
   
-  .hit-me-hard-and-soft .teal {
+  .HMHAS02{
     color: #00739B;
   }
   
-  .hit-me-hard-and-soft .navy {
+  .HMHAS03{
     color: #0A4267;
   }
   
-  .hit-me-hard-and-soft .dark-teal {
+  .HMHAS04{
     color: #00355C;
   }
   
-  .hit-me-hard-and-soft .midnight {
+  .HMHAS05{
     color: #003357;
   }
   
-  .hit-me-hard-and-soft .indigo {
+  .HMHAS06{
     color: #072A41;
   }
   
-  .hit-me-hard-and-soft .navy-dark {
+  .HMHAS07{
     color: #0B213A;
   }
   
-  .hit-me-hard-and-soft .black {
+  .HMHAS08{
     color: #0A1D32;
   }
 
