@@ -35,14 +35,20 @@ nav>ul {
   display: flex; /*導覽列裡的清單項目並排*/
   justify-content: space-evenly; /*空間平均分配到所有子元素之間，頭尾和邊緣之間也保留同樣寬度的間隔*/
 }
-.door:hover {
-  display: inline-block; /* 确保在悬停时按钮不会消失 */
+
+
+.door {
+  color: #ffffff !important;
+  background-color: #00739B !important;
+  border: none !important; /* 避免邊框顯示不正常 */
+  opacity: 1 !important; /* 確保按鈕完全可見 */
 }
 
-.door{
-  color: #ffffff;
-  background-color:#00739B;
+.door:hover {
+  background-color: #005a7d !important; /* 滑鼠懸停變色 */
+  opacity: 1 !important;  /* 確保不會隱藏 */
 }
+
 
 .hit-me-hard-and-soft {
     background-color: #0A1D32;
