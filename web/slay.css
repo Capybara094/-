@@ -1,0 +1,83 @@
+body{
+  background-color: #0A1D32;
+}
+a {
+  color: inherit;
+}
+/*nav*/
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* 確保導覽列在最上層 */
+  background-color:#00739B; /* 讓導覽列有背景色，避免內容與導覽列混淆 */
+}
+nav a {
+  color: inherit; /* 移除超連結顏色 */
+  display: block; /* 讓 <a> 填滿 <li> */
+  font-size: 1.2rem;
+  padding: 10px;
+  text-decoration: none; /* 移除超連結底線 */
+}
+
+nav a:hover {
+  background-color: #00739B;
+  color: #E0E0E0;
+  border-radius: 10px;
+}
+
+nav>ul {
+  background-color:#072A41;
+  color: #E0E0E0;
+  list-style: none;
+  /* 移除項目符號 */
+  margin: 0;
+  padding: 0;
+  display: flex; /*導覽列裡的清單項目並排*/
+  justify-content: space-evenly; /*空間平均分配到所有子元素之間，頭尾和邊緣之間也保留同樣寬度的間隔*/
+}
+.door:hover {
+  display: inline-block; /* 确保在悬停时按钮不会消失 */
+}
+
+.door{
+  color: #ffffff;
+  background-color:#00739B;
+}
+.hit-me-hard-and-soft {
+    background-color: #0A1D32;
+    color: #FFFFFF;
+  }
+  
+  .hit-me-hard-and-soft .light-blue {
+    color: #009DEE;
+  }
+  
+  .hit-me-hard-and-soft .teal {
+    color: #00739B;
+  }
+  
+  .hit-me-hard-and-soft .navy {
+    color: #0A4267;
+  }
+  
+  .hit-me-hard-and-soft .dark-teal {
+    color: #00355C;
+  }
+  
+  .hit-me-hard-and-soft .midnight {
+    color: #003357;
+  }
+  
+  .hit-me-hard-and-soft .indigo {
+    color: #072A41;
+  }
+  
+  .hit-me-hard-and-soft .navy-dark {
+    color: #0B213A;
+  }
+  
+  .hit-me-hard-and-soft .black {
+    color: #0A1D32;
+  }
+
+  

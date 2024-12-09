@@ -7,10 +7,18 @@
 </head>
 
 <body>
+<nav>
+        <ul class="flex-nav">
+            <li><a href="people.php">學生名單</a></li>
+            <li><a href="query.php">幹部紀錄</a></li>
+            <li><a href="fee.php">會費管理</a></li>
+            <li><a href="logout.php">登出</a></li>
+        </ul>
+    </nav>
 
-<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+<!-- <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
   <div class="container-fluid">
-    <!-- 左邊的連結 -->
+
     <ul class="navbar-nav">
       
       <li class="nav-item">
@@ -26,14 +34,14 @@
       </li>
     </ul>
 
-    <!-- 右邊的 logout -->
+
     <ul class="navbar-nav ms-auto">
       <li class="nav-item">
         <a class="nav-link" href="logout.php">登出</a>
       </li>
     </ul>
   </div>
-</nav>
+</nav> -->
 
 </body>
 

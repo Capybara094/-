@@ -49,9 +49,10 @@ try {
   $result = mysqli_query($conn, $sql);
 
 ?>
-
+</br>
 <form action="query.php" method="post">
-  <input placeholder="輸入學號" class="form-control" type="text" name="searchtxt" value="<?=$searchtxt?>">
+  <div class="d-flex justify-content-center">
+  <input placeholder="輸入學號" class="form-control w-50 me-3" type="text" name="searchtxt" value="<?=$searchtxt?>">
   <!-- <select name="order" class="form-select" aria-label="選擇排序欄位">
     <option selected value="" <?=($order == '') ? 'selected' : ''?>>選擇排序欄位</option>
     <option value="1" <?=($order == "1") ? 'selected' : ""?>>大一</option>
@@ -59,7 +60,9 @@ try {
     <option value="3" <?=($order == "3") ? 'selected' : ""?>>大三</option>
     <option value="4" <?=($order == "4") ? 'selected' : ""?>>大四</option>
   </select> -->
-  <input class="btn btn-primary" type="submit" value="搜尋">
+  <input class="btn door" type="submit" value="搜尋">
+</div>
+  
   <a href="insert.php" class="btn btn-primary position-fixed bottom-0 end-0" style="font-size: 30px; width: 60px; height: 60px; margin: 20px;">+</a>
 </form>
 
