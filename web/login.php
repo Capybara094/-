@@ -60,9 +60,6 @@ if ($_POST) {
                 <div class="alert alert-danger mt-2"><?= htmlspecialchars($msg) ?></div>
             <?php endif; ?>
 
-            <div class="text-center mt-3">
-                <a href="register.php" class="btn btn-secondary">註冊</a>
-            </div>
         </div>
     </div>
 </div>
