@@ -42,6 +42,7 @@ if ($_POST) {
 }
 ?>
 <link rel="stylesheet" href="slay.css">
+<div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
 <div class="container">
     <div class="card">
         <div class="card-body">
@@ -60,7 +61,7 @@ if ($_POST) {
             <?php if ($msg): ?>
                 <div class="alert alert-danger mt-2"><?= htmlspecialchars($msg) ?></div>
             <?php endif; ?>
-
+            </div>
         </div>
     </div>
 </div>
