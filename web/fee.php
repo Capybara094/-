@@ -66,7 +66,7 @@ $result = mysqli_query($conn, $sql);
   </select>
   </div>
   <div class="d-flex justify-content-center">
-  <input placeholder="輸入學號" class="form-control mx-3 w-40" type="text" name="searchtxt" value="<?=$searchtxt?>">
+  <input placeholder="輸入學號" class="form-control_1 mx-3 w-40" type="text" name="searchtxt" value="<?=$searchtxt?>">
   <input class="btn btn-primary" type="submit" value="搜尋">  
   </div>
   

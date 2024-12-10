@@ -47,7 +47,7 @@ nav>ul {
   background-color: #005a7d !important; /* 滑鼠懸停變色 */
   opacity: 1 !important;  /* 確保不會隱藏 */
 }
-.form-control{
+.form-control_1{
   display: block;
   width: 45%;
   padding: .375rem .75rem;
