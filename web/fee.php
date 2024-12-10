@@ -58,13 +58,18 @@ $result = mysqli_query($conn, $sql);
 ?>
   <!-- 繳費狀態篩選 -->
 <form action="fee.php" method="post">
-  <input placeholder="輸入學號" class="form-control" type="text" name="searchtxt" value="<?=$searchtxt?>">
-  <select name="status" class="form-select" aria-label="繳費狀態">
+<div class="d-flex justify-content-center">
+  <select name="status" class="form-select m-3 w-50" aria-label="繳費狀態">
     <option selected value="" <?=($status == '') ? 'selected' : ''?>>選擇繳費狀態</option>
     <option value="Y" <?=($status == 'Y') ? 'selected' : ''?>>已繳費</option>
     <option value="N" <?=($status == 'N') ? 'selected' : ''?>>未繳費</option>
   </select>
+  </div>
+  <div class="d-flex justify-content-center">
+  <input placeholder="輸入學號" class="form-control mx-3 w-40" type="text" name="searchtxt" value="<?=$searchtxt?>">
   <input class="btn btn-primary" type="submit" value="搜尋">  
+  </div>
+  
   <a href="insert_pay.php" class="btn btn-primary position-fixed bottom-0 end-0" style="font-size: 30px; width: 60px; height: 60px; margin: 20px;">+</a>
 </form>
 
@@ -74,6 +79,7 @@ $result = mysqli_query($conn, $sql);
 
 <div class="container">
   <table class="table table-bordered table-striped">
+
     <tr>
       <td>學號</td>
       <td>姓名</td>

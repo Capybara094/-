@@ -36,7 +36,6 @@ nav>ul {
   justify-content: space-evenly; /*空間平均分配到所有子元素之間，頭尾和邊緣之間也保留同樣寬度的間隔*/
 }
 
-
 .door {
   color: #ffffff !important;
   background-color: #00739B !important;
@@ -48,7 +47,20 @@ nav>ul {
   background-color: #005a7d !important; /* 滑鼠懸停變色 */
   opacity: 1 !important;  /* 確保不會隱藏 */
 }
-
+.form-control{
+  display: block;
+  width: 45%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--bs-body-color);
+  appearance: none;
+  background-color: var(--bs-body-bg);
+  background-clip: padding-box;
+  border: var(--bs-border-width) solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius);
+}
 
 .hit-me-hard-and-soft {
     background-color: #0A1D32;
