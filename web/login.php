@@ -2,7 +2,6 @@
 
 <?php
 session_start(); //靠這個去記住登入時的資料，LOGIN記得也要
-require_once 'logout.php';
 require_once 'db.php';
 
 $msg = $_GET["msg"] ?? "";
