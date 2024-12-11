@@ -52,7 +52,7 @@ try {
 </br>
 <form action="query.php" method="post">
   <div class="d-flex justify-content-center">
-  <input placeholder="輸入學號" class="form-control w-50 me-3" type="text" name="searchtxt" value="<?=$searchtxt?>">
+  <input placeholder="輸入學號" class="form-control me-3" style="width: 20%;" type="text" name="searchtxt" value="<?=$searchtxt?>">
   <!-- <select name="order" class="form-select" aria-label="選擇排序欄位">
     <option selected value="" <?=($order == '') ? 'selected' : ''?>>選擇排序欄位</option>
     <option value="1" <?=($order == "1") ? 'selected' : ""?>>大一</option>

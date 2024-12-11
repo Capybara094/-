@@ -66,11 +66,11 @@ $result = mysqli_query($conn, $sql);
   </select>
   </div>
   <div class="d-flex justify-content-center">
-  <input placeholder="輸入學號" class="form-control_1 mx-3 w-40" type="text" name="searchtxt" value="<?=$searchtxt?>">
-  <input class="btn btn-primary" type="submit" value="搜尋">  
+  <input placeholder="輸入學號" class="form-control mx-3 " style="width: 45%;" type="text" name="searchtxt" value="<?=$searchtxt?>">
+  <input class="btn door" type="submit" value="搜尋">  
   </div>
   
-  <a href="insert_pay.php" class="btn btn-primary position-fixed bottom-0 end-0" style="font-size: 30px; width: 60px; height: 60px; margin: 20px;">+</a>
+  <a href="insert_pay.php" class="btn door position-fixed bottom-0 end-0" style="font-size: 30px; width: 60px; height: 60px; margin: 20px;">+</a>
 </form>
 
 <div class="container mt-3">
