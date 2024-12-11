@@ -58,7 +58,8 @@ nav>ul {
   }
   
   .HMHAS02{
-    color: #00739B;
+    color: #00739B !important;
+    opacity: 0.5 !important;
   }
   
   .HMHAS03{

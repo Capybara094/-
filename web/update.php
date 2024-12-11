@@ -75,7 +75,7 @@ try {
 
 ?>
 
-<div class="container">
+<div class="container mt-5" align=center>
 <div class="card" style="width: 80%; max-width: 600px;">
   <!-- 表單：顯示文章原本的資料 -->
   <form action="update.php?Stu_id=<?=$Stu_id?>&action=confirmed" method="post">
