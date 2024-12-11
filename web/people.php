@@ -76,10 +76,6 @@ try {
     </div>
   <input class="btn btn-primary w-20" type="submit" value="搜尋">
   </div>
-  <!-- Only show the '+' button for admins -->
-  <!-- <?php?>
-  <a href="insert.php" class="btn btn-primary position-fixed bottom-0 end-0" style="font-size: 30px; width: 60px; height: 60px; margin: 20px;">+</a>
-  <?php?> -->
 </form>
 
 <div class="container">
@@ -89,9 +85,6 @@ try {
       <td>姓名</td>
       <td>聯絡電話</td>
       <td>入學時間</td>
-      <!-- <?php?>
-        <td>操作</td> 
-      <?php?> -->
     </tr>
     <?php while ($row = mysqli_fetch_assoc($result)) {?>
     <tr>
@@ -99,12 +92,6 @@ try {
       <td><?=$row["name"]?></td>
       <td><?=$row["contact"]?></td>
       <td><?=$row["time"]?></td>
-      <!-- <?php?>
-        <td>
-          <a href="update.php?Stu_id=<?=$row["Stu_id"]?>" class="btn btn-primary">修改</a>
-          <a href="delete.php?Stu_id=<?=$row["Stu_id"]?>" class="btn btn-danger">刪除</a>
-        </td>
-      <?php?> -->
     </tr>
     <?php } ?>
   </table>
