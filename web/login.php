@@ -18,7 +18,7 @@ if ($_POST) {
         mysqli_stmt_bind_param($stmt, "s", $account);
         mysqli_stmt_execute($stmt);
         $result = mysqli_stmt_get_result($stmt);
-        
+
         if ($row = mysqli_fetch_assoc($result)) {
             if ($row['account'] == $account && $row['password'] == $password) {
                 echo "登入成功";
@@ -43,24 +43,24 @@ if ($_POST) {
 ?>
 <link rel="stylesheet" href="slay.css">
 <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
-<div class="container">
-    <div class="card">
-        <div class="card-body">
-            <h3 class="card-title text-center">登入</h3>
-            <form action="login.php" method="post">
-                <div class="form-group">
-                    <label for="account">帳號</label>
-                    <input placeholder="帳號" class="form-control" type="text" name="account" required><br>
-                </div>
-                <div class="form-group">
-                    <label for="password">密碼</label>
-                    <input placeholder="密碼" class="form-control" type="password" name="password" required><br>
-                </div>
-                <button class="btn btn-primary btn-block" type="submit">登入</button>
-            </form>
-            <?php if ($msg): ?>
-                <div class="alert alert-danger mt-2"><?= htmlspecialchars($msg) ?></div>
-            <?php endif; ?>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title text-center">登入</h3>
+                <form action="login.php" method="post">
+                    <div class="form-group">
+                        <label for="account">帳號</label>
+                        <input placeholder="帳號" class="form-control" type="text" name="account" required><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">密碼</label>
+                        <input placeholder="密碼" class="form-control" type="password" name="password" required><br>
+                    </div>
+                    <button class="btn btn-primary btn-block" type="submit">登入</button>
+                </form>
+                <?php if ($msg): ?>
+                    <div class="alert alert-danger mt-2"><?= htmlspecialchars($msg) ?></div>
+                <?php endif; ?>
             </div>
         </div>
     </div>
