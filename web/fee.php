@@ -59,7 +59,7 @@ $result = mysqli_query($conn, $sql);
   <!-- 繳費狀態篩選 -->
 <form action="fee.php" method="post">
 <div class="d-flex justify-content-center">
-  <select name="status" class="form-select m-3 w-50" aria-label="繳費狀態">
+  <select name="status" class="form-select mt-5 m-3 w-50" aria-label="繳費狀態">
     <option selected value="" <?=($status == '') ? 'selected' : ''?>>選擇繳費狀態</option>
     <option value="Y" <?=($status == 'Y') ? 'selected' : ''?>>已繳費</option>
     <option value="N" <?=($status == 'N') ? 'selected' : ''?>>未繳費</option>

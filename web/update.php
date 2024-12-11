@@ -82,14 +82,14 @@ try {
     
 
   <div class="my-3 row justify-content-center align-items-center">
-      <label for="Stu_id" class="col-sm-1 col-form-label">學號</label>
+      <label for="Stu_id" class="col-sm-2 col-form-label">學號</label>
       <div class="col-sm-6">
         <input type="text" class="form-control" id="Stu_id" value="<?=$Stu_id?>" readonly>
       </div>
     </div>
 
     <div class="mb-3 row justify-content-center align-items-center">
-      <label for="_1" class="col-sm-1 col-form-label">大一</label>
+      <label for="_1" class="col-sm-2 col-form-label">大一</label>
       <div class="col-sm-6">
         <!-- 輸入框會顯示原來的公司名稱 -->
         <input type="text" class="form-control" name="1" id="_1" placeholder="職位" value="<?=$one?>">
@@ -97,7 +97,7 @@ try {
     </div>
 
     <div class="mb-3 row justify-content-center align-items-center">
-      <label for="_2" class="col-sm-1 col-form-label">大二</label>
+      <label for="_2" class="col-sm-2 col-form-label">大二</label>
       <div class="col-sm-6">
         <!-- 輸入框會顯示原來的公司名稱 -->
         <input type="text" class="form-control" name="2" id="_2" placeholder="職位" value="<?=$two?>">
@@ -105,7 +105,7 @@ try {
     </div>
 
     <div class="mb-3 row justify-content-center align-items-center">
-      <label for="_3" class="col-sm-1 col-form-label">大三</label>
+      <label for="_3" class="col-sm-2 col-form-label">大三</label>
       <div class="col-sm-6">
         <!-- 輸入框會顯示原來的公司名稱 -->
         <input type="text" class="form-control" name="3" id="_3" placeholder="職位" value="<?=$three?>">
@@ -113,7 +113,7 @@ try {
     </div>
 
     <div class="mb-3 row justify-content-center align-items-center">
-      <label for="_4" class="col-sm-1 col-form-label">大四</label>
+      <label for="_4" class="col-sm-2 col-form-label">大四</label>
       <div class="col-sm-6">
         <!-- 輸入框會顯示原來的公司名稱 -->
         <input type="text" class="form-control" name="4" id="_4" placeholder="職位" value="<?=$four?>">

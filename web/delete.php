@@ -81,19 +81,15 @@ try {
 }
 
 ?>
-
+  <div class="container mt-5">
   <table class="table table-bordered table-striped">
 
     <tr>
-
       <td>學生</td>
-
       <td>大一職位</td>
-
       <td>大二職位</td>
-
       <td>大三職位</td>
-
+      <td>大四職位</td>
     </tr>
 
     <tr>
@@ -111,9 +107,10 @@ try {
 
   </table>
 
-  <a href="delete.php?Stu_id=<?=$Stu_id?>&action=confirmed" class="btn btn-primary">刪除</a>
-
-
+  <div class="d-flex justify-content-center">
+  <a href="delete.php?Stu_id=<?=$Stu_id?>&action=confirmed" class="btn btn-danger">刪除</a>
+  </div>
+  </div>
 
 <?php
 

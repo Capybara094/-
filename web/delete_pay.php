@@ -80,7 +80,7 @@ try {
 }
 
 ?>
-
+  <div class="container mt-5">
   <table class="table table-bordered table-striped">
 
     <tr>
@@ -108,10 +108,10 @@ try {
     </tr>
 
   </table>
-
-  <a href="delete_pay.php?Stu_id=<?=$Stu_id?>&action=confirmed" class="btn btn-primary">刪除</a>
-
-
+  <div class="d-flex justify-content-center">
+  <a href="delete_pay.php?Stu_id=<?=$Stu_id?>&action=confirmed" class="btn btn-danger">刪除</a>
+  </div>
+  </div>
 
 <?php
 

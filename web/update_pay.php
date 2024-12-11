@@ -68,34 +68,36 @@ try {
 }
 ?>
 
-<div class="container">
+<div class="container mt-5" align=center>
+<div class="card" style="width: 80%; max-width: 600px;">
   <!-- 表單：顯示文章原本的資料 -->
   <form action="update_pay.php?Stu_id=<?=$Stu_id?>&action=confirmed" method="post">
-    <div class="mb-3 row">
+
+    <div class="my-3 row justify-content-center align-items-center">
       <label for="Stu_id" class="col-sm-2 col-form-label">學號</label>
-      <div class="col-sm-10">
+      <div class="col-sm-6">
         <input type="text" class="form-control" id="Stu_id" value="<?=$Stu_id?>" readonly>
       </div>
     </div>
 
-    <div class="mb-3 row">
+    <div class="mb-3 row justify-content-center align-items-center">
       <label for="name" class="col-sm-2 col-form-label">姓名</label>
-      <div class="col-sm-10">
+      <div class="col-sm-6">
         <input type="text" class="form-control" id="name" name="name" value="<?=$name?>">
       </div>
     </div>
 
-    <div class="mb-3 row">
+    <div class="mb-3 row justify-content-center align-items-center">
       <label for="_pay_date" class="col-sm-2 col-form-label">付款日期</label>
-      <div class="col-sm-10">
+      <div class="col-sm-6">
         <!-- 自動填入當前時間並設為 readonly -->
         <input type="text" class="form-control" name="pay_date" id="_pay_date" placeholder="pay_date" value="<?=$pay_date?>" readonly>
       </div>
     </div>
 
-    <div class="mb-3 row">
+    <div class="mb-3 row justify-content-center align-items-center">
       <label for="_status" class="col-sm-2 col-form-label">繳費狀態</label>
-      <div class="col-sm-10">
+      <div class="col-sm-6">
         <!-- 使用 select 來讓使用者選擇 'Y' 或 'N' -->
         <select class="form-control" name="status" id="_status" onchange="updatePayDate()">
           <option value="Y" <?=$status == 'Y' ? 'selected' : ''?>>已繳費</option>
@@ -103,13 +105,15 @@ try {
         </select>
       </div>
     </div>
-
-    <input class="btn btn-primary" type="submit" value="送出">
+    <div class="d-flex justify-content-center">
+    <input class="btn btn-primary me-5" type="submit" value="送出">
+    <button class="btn btn-secondary" onclick="history.back();">返回</button>
+    </div>
   </form>
 </div>
-
+</div>
 <!-- 返回操作的按鈕 -->
-<button class="btn btn-secondary" onclick="history.back();">返回</button>
+
 
 <script>
   // 當選擇繳費狀態時，更新付款日期
