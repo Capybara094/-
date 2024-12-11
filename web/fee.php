@@ -85,9 +85,9 @@ $result = mysqli_query($conn, $sql);
       <td>姓名</td>
       <td>付款時間</td>
       <td>付款狀態</td>
-      <?php?>
+
         <td>操作</td> <!-- Only show the "操作" column for admins -->
-      <?php?>
+
     </tr>
     <?php while ($row = mysqli_fetch_assoc($result)) {?>
     <tr>
@@ -95,12 +95,12 @@ $result = mysqli_query($conn, $sql);
       <td><?=$row["name"]?></td>
       <td><?=$row["pay_date"]?></td>
       <td><?=$row["status"] == 'Y' ? '已繳費' : '未繳費'?></td>  <!-- 判斷繳費狀態 -->
-      <?php?>
+
         <td>
           <a href="update_pay.php?Stu_id=<?=$row["Stu_id"]?>" class="btn btn-primary">修改</a>
           <a href="delete_pay.php?Stu_id=<?=$row["Stu_id"]?>" class="btn btn-danger">刪除</a>
         </td>
-      <?php?>
+
     </tr>
     <?php } ?>
   </table>
