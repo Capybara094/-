@@ -1,7 +1,13 @@
-<?php require_once "header.php" ?>
 
 <?php
-session_start(); //靠這個去記住登入時的資料，LOGIN記得也要
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+  }
+  
+  if (!isset($_SESSION["account"]) && basename($_SERVER['REQUEST_URI']) !== 'login.php') {
+    header("Location: login.php");  // 重定向到登入頁面，或任意你希望跳轉的頁面
+    exit();  // 停止程式執行
+  }
 
 require_once 'db.php';
 
@@ -41,6 +47,24 @@ if ($_POST) {
     }
 }
 ?>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+<nav>
+    <ul class="flex-nav">
+      <li><a href="people.php">學生名單</a></li>
+      <li><a href="query.php">幹部紀錄</a></li>
+      <li><a href="fee.php">會費管理</a></li>
+
+    </ul>
+  </nav> 
 <link rel="stylesheet" href="slay.css">
 <div class="d-flex justify-content-center align-items-center" style="height: 50vh;">
     <div class="container">
@@ -65,5 +89,8 @@ if ($_POST) {
         </div>
     </div>
 </div>
+
+                </body>
+                </html>
 
 <?php require_once "footer.php" ?>
