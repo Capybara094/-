@@ -48,6 +48,9 @@ try {
   // Execute the query
   $result = mysqli_query($conn, $sql);
 
+  // Get the total count of the results
+ $totalRecords = mysqli_num_rows($result);
+
 ?>
 </br>
 <form action="query.php" method="post">
@@ -65,6 +68,10 @@ try {
   
   <a href="insert.php" class="btn btn-primary position-fixed bottom-0 end-0" style="font-size: 30px; width: 60px; height: 60px; margin: 20px;">+</a>
 </form>
+
+<div class="container mt-3 text-white">
+  <p>共 <?=$totalRecords?> 筆資料</p>
+</div>
 
 <div class="container">
   <table class="table table-bordered table-striped">

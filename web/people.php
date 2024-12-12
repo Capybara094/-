@@ -57,6 +57,9 @@ try {
   // Check if user is logged in and is an admin (role 'M')
   // $isAdmin = isset($_SESSION['role']) && $_SESSION['role'] === 'M';
 
+  // Get the total count of the results
+ $totalRecords = mysqli_num_rows($result);
+
 ?>
 
 <form action="people.php" method="post">
@@ -77,6 +80,10 @@ try {
   <input class="btn door w-20" type="submit" value="搜尋">
   </div>
 </form>
+
+<div class="container mt-3 text-white">
+  <p>共 <?=$totalRecords?> 筆資料</p>
+</div>
 
 <div class="container">
   <table class="table table-bordered table-striped">

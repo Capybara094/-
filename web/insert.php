@@ -40,11 +40,11 @@ try {
 
 ?>
 <div class="container">
-  <link rel="stylesheet" href="php.css">
+  <link rel="stylesheet" href="slay.css">
 
   <!-- Form within a table for better structure -->
   <form action="insert.php" method="post">
-    <table class="table table-bordered table-striped" style="width:700px;height:700px;">
+    <table class="table table-bordered table-striped center" style="width:700px;height:700px;">
       <thead>
         <tr>
           <th colspan="5" class="text-center">新增學生資料</th>
