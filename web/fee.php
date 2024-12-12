@@ -73,7 +73,7 @@ $result = mysqli_query($conn, $sql);
   <a href="insert_pay.php" class="btn door position-fixed bottom-0 end-0" style="font-size: 30px; width: 60px; height: 60px; margin: 20px;">+</a>
 </form>
 
-<div class="container mt-3">
+<div class="container mt-3 text-white">
   <p>共 <?=$totalRecords?> 筆資料</p>
 </div>
 
@@ -94,7 +94,7 @@ $result = mysqli_query($conn, $sql);
       <td><?=$row["Stu_id"]?></td>
       <td><?=$row["name"]?></td>
       <td><?=$row["pay_date"]?></td>
-      <td><?=$row["status"] == 'Y' ? '已繳費' : '未繳費'?></td>  判斷繳費狀態
+      <td><?=$row["status"] == 'Y' ? '已繳費' : '未繳費'?></td>
 
         <td style="width: 150px;">
           <a href="update_pay.php?Stu_id=<?=$row["Stu_id"]?>" class="btn btn-primary">修改</a>
