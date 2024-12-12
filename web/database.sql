@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Dec 07, 2024 at 10:00 AM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- 主機： 127.0.0.1
+-- 產生時間： 2024-12-12 07:46:43
+-- 伺服器版本： 10.4.32-MariaDB
+-- PHP 版本： 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `database`
+-- 資料庫： `database`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fee_manage`
+-- 資料表結構 `fee_manage`
 --
 
 CREATE TABLE `fee_manage` (
@@ -35,7 +35,7 @@ CREATE TABLE `fee_manage` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `fee_manage`
+-- 傾印資料表的資料 `fee_manage`
 --
 
 INSERT INTO `fee_manage` (`Stu_id`, `name`, `pay_date`, `status`) VALUES
@@ -56,7 +56,7 @@ INSERT INTO `fee_manage` (`Stu_id`, `name`, `pay_date`, `status`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `job`
+-- 資料表結構 `job`
 --
 
 CREATE TABLE `job` (
@@ -68,7 +68,7 @@ CREATE TABLE `job` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `job`
+-- 傾印資料表的資料 `job`
 --
 
 INSERT INTO `job` (`Stu_id`, `1`, `2`, `3`, `4`) VALUES
@@ -89,7 +89,7 @@ INSERT INTO `job` (`Stu_id`, `1`, `2`, `3`, `4`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `login`
+-- 資料表結構 `login`
 --
 
 CREATE TABLE `login` (
@@ -98,7 +98,7 @@ CREATE TABLE `login` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `login`
+-- 傾印資料表的資料 `login`
 --
 
 INSERT INTO `login` (`account`, `password`) VALUES
@@ -111,12 +111,15 @@ INSERT INTO `login` (`account`, `password`) VALUES
 ('412401007', '0944556675'),
 ('412401008', '0911223346'),
 ('412401009', '0988776657'),
-('412401010', '0901234568');
+('412401010', '0901234568'),
+('412401094', '0906123456'),
+('412401123', '0908456789'),
+('412401135', '0909123456');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `people`
+-- 資料表結構 `people`
 --
 
 CREATE TABLE `people` (
@@ -127,7 +130,7 @@ CREATE TABLE `people` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `people`
+-- 傾印資料表的資料 `people`
 --
 
 INSERT INTO `people` (`Stu_id`, `name`, `contact`, `time`) VALUES
@@ -139,33 +142,36 @@ INSERT INTO `people` (`Stu_id`, `name`, `contact`, `time`) VALUES
 ('412401006', '林華', '0955444334', '2023-09-01'),
 ('412401007', '劉明', '0944556675', '2023-09-01'),
 ('412401008', '鄭秀', '0911223346', '2023-09-01'),
-('412401009', '郭玉', '0988776657', '2023-09-01'),
-('412401010', '徐勇', '0901234568', '2023-09-01');
+('412401009', '郭玉', '0988776657', '2019-09-02'),
+('412401010', '徐勇', '0901234568', '2023-09-01'),
+('412401094', '黃旭', '0908123456', '2021-09-02'),
+('412401123', '楊沛蓁', '0908456789', '2019-12-18'),
+('412401135', '鄔雨彤', '0909123456', '2019-12-08');
 
 --
--- Indexes for dumped tables
+-- 已傾印資料表的索引
 --
 
 --
--- Indexes for table `fee_manage`
+-- 資料表索引 `fee_manage`
 --
 ALTER TABLE `fee_manage`
   ADD PRIMARY KEY (`Stu_id`);
 
 --
--- Indexes for table `job`
+-- 資料表索引 `job`
 --
 ALTER TABLE `job`
   ADD PRIMARY KEY (`Stu_id`);
 
 --
--- Indexes for table `login`
+-- 資料表索引 `login`
 --
 ALTER TABLE `login`
   ADD PRIMARY KEY (`account`);
 
 --
--- Indexes for table `people`
+-- 資料表索引 `people`
 --
 ALTER TABLE `people`
   ADD PRIMARY KEY (`Stu_id`);
