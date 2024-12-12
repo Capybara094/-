@@ -32,13 +32,13 @@ try {
                          OR `time` LIKE '%$searchtxt%' )";
     }
 }
-  // // Add date range condition
-  // if ($start_date) {
-  //   $conditions[] = "pdate >= '$start_date'";
-  // }
-  // if ($end_date) {
-  //   $conditions[] = "pdate <= '$end_date'";
-  // }
+  // Add date range condition
+  if ($start_date) {
+    $conditions[] = "time >= '$start_date'";
+  }
+  if ($end_date) {
+    $conditions[] = "time <= '$end_date'";
+  }
 
   // Construct the final SQL query
   $sql = "SELECT * FROM  people";
