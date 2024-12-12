@@ -42,7 +42,7 @@ if ($_POST) {
 }
 ?>
 <link rel="stylesheet" href="slay.css">
-<div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+<div class="d-flex justify-content-center align-items-center" style="height: 50vh;">
     <div class="container">
         <div class="card">
             <div class="card-body">

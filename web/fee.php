@@ -81,10 +81,10 @@ $result = mysqli_query($conn, $sql);
   <table class="table table-bordered table-striped">
 
     <tr>
-      <td>學號</td>
-      <td>姓名</td>
-      <td>付款時間</td>
-      <td>付款狀態</td>
+      <td >學號</td>
+      <td >姓名</td>
+      <td >付款時間</td>
+      <td >付款狀態</td>
 
         <td>操作</td> <!-- Only show the "操作" column for admins -->
 
@@ -94,9 +94,9 @@ $result = mysqli_query($conn, $sql);
       <td><?=$row["Stu_id"]?></td>
       <td><?=$row["name"]?></td>
       <td><?=$row["pay_date"]?></td>
-      <td><?=$row["status"] == 'Y' ? '已繳費' : '未繳費'?></td>  <!-- 判斷繳費狀態 -->
+      <td><?=$row["status"] == 'Y' ? '已繳費' : '未繳費'?></td>  判斷繳費狀態
 
-        <td>
+        <td style="width: 150px;">
           <a href="update_pay.php?Stu_id=<?=$row["Stu_id"]?>" class="btn btn-primary">修改</a>
           <a href="delete_pay.php?Stu_id=<?=$row["Stu_id"]?>" class="btn btn-danger">刪除</a>
         </td>
